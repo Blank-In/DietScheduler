@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="back" prefHeight="500.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainLayoutController">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="cm" prefWidth="80.0" promptText="키" />
+                  <Label text="cm     " />
+                  <TextField fx:id="kg" prefWidth="80.0" promptText="몸무게" />
+                  <Label text="kg     " />
+                  <TextField fx:id="age" prefWidth="80.0" promptText="나이" />
+                  <Label text="세     " />
+                  <CheckBox fx:id="Man" mnemonicParsing="false" onAction="#mancheck" text="남자   " />
+                  <CheckBox fx:id="Woman" mnemonicParsing="false" onAction="#womancheck" text="여자     " />
+                  <Button id="btnHealth" mnemonicParsing="false" onAction="#BMI" stylesheets="@style.css" text="건강 상태 확인하기" />
+               </children>
+            </HBox>
+            <Label fx:id="state" alignment="CENTER" prefHeight="30.0" prefWidth="680.0" textFill="#d05b29" />
+            <VBox fx:id="schedule" prefHeight="300.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0">
+                     <children>
+                        <TextField fx:id="week" prefWidth="50.0" promptText="12" />
+                        <Label text=" 주 동안 감량 " />
+                        <Label />
+                        <Button id="btnHealth" mnemonicParsing="false" onAction="#makeFood" stylesheets="@style.css" text="하기" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="250.0" prefWidth="680.0">
+                    <columns>
+                        <TableColumn fx:id="mon" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="월요일" />
+                      <TableColumn fx:id="tue" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="화요일" />
+                      <TableColumn fx:id="wed" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="수요일" />
+                        <TableColumn fx:id="thu" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="목요일" />
+                        <TableColumn fx:id="fri" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="금요일" />
+                        <TableColumn fx:id="sat" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="토요일" />
+                        <TableColumn fx:id="sun" maxWidth="200.0" minWidth="50.0" prefWidth="96.5" text="일요일" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
